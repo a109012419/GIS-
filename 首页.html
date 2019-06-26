@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>太平天国广西运动可视化GIS</title>
+		<link rel="stylesheet" href="TechSup/ol/ol.css" type="text/css">
+		<style>
+			.map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+		<script src="TechSup/ol/ol.js"></script>
+		<!-- Bootstrap core CSS -->
+		<link href="TechSup/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							</button>
+							<a class="navbar-brand" href="首页.html">太平天国广西运动可视化</a>
+						</div>
+
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="太平军行进路线总览.html" target='_blank'>战争路线总览</a>
+								</li>
+								<li>
+									<a href="传教路线.html" target='_blank'>传教运动总览</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">著名战役<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="金田之战.html" target='_blank'>金田之战</a>
+										</li>
+										<li>
+											<a href="牛排岭之战.html" target='_blank'>牛排岭之战</a>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">兵力对比<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="金田之战兵力对比.html" target='_blank'>金田之战兵力对比</a>
+										</li>
+										<li>
+											<a href="牛排岭之战兵力对比.html" target='_blank'>牛排岭之战兵力对比</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<form class="navbar-form navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" />
+								</div> <button type="submit" class="btn btn-default">搜索
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="javascript:alert('我们来自南师大17级地理信息科学系\n\n小组成员:\n芮旭东 10170317 QQ:109012419\n杨逸尘 10170326 QQ:1692240688\n \n指导老师:胡迪')">联系我们
+										<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div id="map" class="map"></div>
+					<div class="jumbotron">
+						<h2 class="text-primary">
+							太平军在广西运动可视化地理信息系统
+						</h2>
+						<br>
+						<h4>
+							本网站是一个用于展示太平天国年间洪秀全在广西范围内运动的Web端地理信息系统，其中包括洪秀全在广西的传教活动、战争路线总览以及两次重大战役展示。
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column">
+					<h2>
+						开发者信息
+					</h2>
+					<p>
+						姓名：芮旭东 杨逸尘
+						<br>
+						单位：南京师范大学地理科学学院地理信息科学系
+						<br>
+						指导老师：胡迪
+					</p>
+				</div>
+				<div class="col-md-4 column">
+					<h2>
+						技术支持与数据信息
+					</h2>
+					<p>
+						网站css样式主要依赖于BootStrap框架，JavaScript部分使用了Jquery框架，地图模块部分使用了Openlayers提供的JavaScript类库包。
+						<br>
+						系统中展示的地图均采用了GeoJson格式的矢量地图(由我们小组成员在Arcgis端绘制为Shapefile再转为GeoJson格式)。
+					</p>
+				</div>
+				<div class="col-md-4 column">
+					<h2>
+						参考资料
+					</h2>
+					<p>
+						Openlayers官方网站&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;<a href='https://openlayers.org/' target='_blank'>由此前往</a>
+						<br>
+						BootStrap中文网 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a href='https://www.bootcss.com/' target='_blank'>由此前往</a>
+						<br>
+						JqueryAPI中文文档网 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a
+						 href='https://www.jquery123.com/' target='_blank'>由此前往</a>
+						<br>
+						太平天国历史地图集(作者：郭毅生)
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src='JS/首页.js'></script>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="TechSup/jquery/jquery-3.4.1.min.js"></script>
+		<script src="TechSup/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
